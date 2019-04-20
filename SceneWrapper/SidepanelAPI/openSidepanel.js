@@ -15,7 +15,8 @@ const SidepanelContent = (
             backgroundColor: "purple"
         }}
     >
-        I am the Sidepanel
+        I am the Sidepanel<br/>
+        Click on dark cover or drag me out to close.
     </div>
 );
 const SidepanelConfig = {
