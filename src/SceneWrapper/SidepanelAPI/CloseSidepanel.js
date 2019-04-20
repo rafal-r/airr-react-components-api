@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { SceneWrapper, Sidepanel } from "airr-react";
-import SimpleView, { SimpleViewName } from "../../src/views/SimpleView";
+import SimpleView, { SimpleViewName } from "../../views/SimpleView";
 import "airr-react/dist/airr-react.css";
 
 class CustomSidepanel extends Sidepanel {
@@ -17,7 +17,7 @@ class CustomSidepanel extends Sidepanel {
                     backgroundColor: "purple"
                 }}
             >
-                I am the Sidepanel
+                I am the Sidepanel. Use below button to close.
                 <br />
                 <button onClick={this.props.hideSidepanel}>hide me</button>
             </div>
@@ -34,9 +34,10 @@ export default class SimpleScene extends SceneWrapper {
             sidepanel: {
                 type: CustomSidepanel,
                 props: {
-                    side: "top",
+                    side: "left",
                     hideSidepanel: this.hideSidepanel,
-                    enabled: false,
+                    enabled: true,
+                    isShown: true,
                     sizeFactor: 1 / 3,
                     animationTime: 200
                 }

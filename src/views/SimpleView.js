@@ -3,7 +3,7 @@ import { ViewWrapper } from "airr-react";
 
 export const SimpleViewName = "simple-view";
 export default class SimpleView extends ViewWrapper {
-    content() {
+    content = () => {
         return (
             <div
                 style={{
@@ -15,15 +15,17 @@ export default class SimpleView extends ViewWrapper {
                 }}
             >
                 {" "}
-                <button
-                    onClick={this.props.openSidepanel}
-                    style={{
-                        fontSize: "2rem"
-                    }}
-                >
-                    Click me
-                </button>
+                {this.props.handleButtonClick && (
+                    <button
+                        onClick={this.props.handleButtonClick}
+                        style={{
+                            fontSize: "2rem"
+                        }}
+                    >
+                        Click me
+                    </button>
+                )}
             </div>
         );
-    }
+    };
 }
