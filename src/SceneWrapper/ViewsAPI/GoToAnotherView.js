@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import { SceneWrapper } from "airr-react";
 import HelloWorld, {
     viewName as HelloWorldViewName
-} from "../../views/HelloWorld";
+} from "../../views/HelloWorldView";
 import CommonView, {
     getNextCommonViewName2,
     viewNameTpl as CommonViewNameTpl
