@@ -41,7 +41,6 @@ export default class SimpleScene extends SceneWrapper {
             type: HelloWorld,
             props: {
                 name: HelloWorldViewName,
-                title: "This is Title in navbar",
                 children: (
                     <button
                         onClick={this.goToAnotherView}
