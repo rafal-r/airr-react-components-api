@@ -9,6 +9,7 @@ import CommonView, {
     viewNameTpl as CommonViewNameTpl
 } from "../../views/CommonView";
 import "airr-react/dist/airr-react.css";
+import "../../css/common.css";
 
 export default class SimpleScene extends SceneWrapper {
     constructor(props) {
