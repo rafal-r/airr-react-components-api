@@ -3,11 +3,11 @@ import ReactDOM from "react-dom";
 import { SceneWrapper } from "airr-react";
 import HelloWorld, {
     viewName as HelloWorldViewName
-} from "../views/HelloWorld";
+} from "../../views/HelloWorld";
 import CommonView, {
     getNextCommonViewName2,
     viewNameTpl as CommonViewNameTpl
-} from "../views/CommonView";
+} from "../../views/CommonView";
 import "airr-react/dist/airr-react.css";
 
 export default class SimpleScene extends SceneWrapper {
