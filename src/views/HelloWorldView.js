@@ -1,7 +1,7 @@
 import React from "react";
 import { View } from "airr-react";
 
-export const viewName = "hello-world-view";
+export const HelloWorldViewName = "hello-world-view";
 
 export default class HelloWorld extends View {
     content() {
@@ -10,6 +10,6 @@ export default class HelloWorld extends View {
                 ? this.props.children()
                 : this.props.children;
 
-        return <div className={viewName}>{content ? content : "What up!"}</div>;
+        return <div className={HelloWorldViewName}>{content ? content : "What up!"}</div>;
     }
 }
