@@ -1,8 +1,8 @@
 import React from "react";
-import { ViewWrapper } from "airr-react";
+import { View } from "airr-react";
 
 export const SimpleViewName = "simple-view";
-export default class SimpleView extends ViewWrapper {
+export default class SimpleView extends View {
     content = () => {
         return (
             <div

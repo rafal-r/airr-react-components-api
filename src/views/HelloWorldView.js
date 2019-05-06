@@ -1,9 +1,9 @@
 import React from "react";
-import { ViewWrapper } from "airr-react";
+import { View } from "airr-react";
 
 export const viewName = "hello-world-view";
 
-export default class HelloWorld extends ViewWrapper {
+export default class HelloWorld extends View {
     content() {
         const content =
             typeof this.props.children === "function"

@@ -1,12 +1,6 @@
-.hello-world-view {
+.foo-wrap {
     display: flex;
     justify-content: center;
     align-items: center; 
     height: 100%;   
-}
-.common-view {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
 }

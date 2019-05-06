@@ -1,12 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { SceneWrapper, Sidepanel } from "airr-react";
+import { Scene, Sidepanel } from "airr-react";
 import SimpleView, { SimpleViewName } from "../../views/SimpleView";
 import "airr-react/dist/airr-react.css";
 
-class CustomSidepanel extends Sidepanel {
-    content() {
-        return (
+const SidepanelConfig = {
+    type: Sidepanel,
+    props: {
+        side: "top",
+        children: (
             <div
                 style={{
                     width: "100%",
@@ -17,40 +19,39 @@ class CustomSidepanel extends Sidepanel {
                     backgroundColor: "purple"
                 }}
             >
-                I am the Sidepanel. Use below button to close.
+                I am the Sidepanel
                 <br />
-                <button onClick={this.props.hideSidepanel}>hide me</button>
+                Click on dark cover or drag me out to close.
             </div>
-        );
+        ),
+        enabled: false,
+        sizeFactor: 1 / 3,
+        animationTime: 200
     }
-}
-export default class SimpleScene extends SceneWrapper {
+};
+
+export default class SimpleScene extends Scene {
     constructor(props) {
         super(props);
 
         this.state = {
             ...this.state,
             activeViewName: SimpleViewName,
-            sidepanel: {
-                type: CustomSidepanel,
-                props: {
-                    side: "left",
-                    hideSidepanel: this.hideSidepanel,
-                    enabled: true,
-                    isShown: true,
-                    sizeFactor: 1 / 3,
-                    animationTime: 200
-                }
-            },
+            sidepanel: SidepanelConfig,
             views: [this.getFreshViewConfig(SimpleViewName)]
         };
     }
+
+    handleButtonClick = () => {
+        return this.openSidepanel();
+    };
 
     viewsConfig = {
         [SimpleViewName]: {
             type: SimpleView,
             props: {
-                name: SimpleViewName
+                name: SimpleViewName,
+                handleButtonClick: this.handleButtonClick
             }
         }
     };
