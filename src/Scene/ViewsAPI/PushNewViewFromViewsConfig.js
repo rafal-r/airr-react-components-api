@@ -28,7 +28,8 @@ export default class SimpleScene extends Scene {
                     <br />
                     special object which defines views specification.
                 </h2>
-            )
+            ),
+            style: { backgroundColor: "purple" }
         });
     };
 

@@ -36,12 +36,14 @@ export default class SimpleScene extends Scene {
             props: {
                 name: HelloWorldViewName,
                 children: (
-                    <button
-                        onClick={this.updateCurrentView}
-                        style={{ fontSize: "2rem" }}
-                    >
-                        Click me
-                    </button>
+                    <div className="foo-wrap">
+                        <button
+                            onClick={this.updateCurrentView}
+                            style={{ fontSize: "2rem" }}
+                        >
+                            Click me
+                        </button>
+                    </div>
                 )
             }
         }

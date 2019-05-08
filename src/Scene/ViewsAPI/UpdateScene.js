@@ -17,22 +17,22 @@ export default class SimpleScene extends Scene {
         };
     }
 
-	updateScene = e => {
-		this.changeView(
-			HelloWorldViewName,
-			{
-				children: (
-					<h2 style={{ textAlign: "center" }}>
-						The scene was altered. Navbar was added.
-					</h2>
-				)
-			},
-			{
-				navbar: true,
-				style: { backgroundColor: "green" }
-			}
-		);
-	};
+    updateScene = e => {
+        this.changeView(
+            HelloWorldViewName,
+            {
+                children: (
+                    <h2 style={{ textAlign: "center" }}>
+                        The scene was altered. Navbar was added.
+                    </h2>
+                ),
+                style: { backgroundColor: "brown" }
+            },
+            {
+                navbar: true
+            }
+        );
+    };
 
     viewsConfig = {
         [HelloWorldViewName]: {

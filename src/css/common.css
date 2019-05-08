@@ -1,4 +1,4 @@
-.foo-wrap {
+.foo-wrap, .hello-world-view{
     display: flex;
     justify-content: center;
     align-items: center; 
