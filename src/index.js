@@ -1,5 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
+const rootElement = document.getElementById("root");
+
 // import OpenSidepanel from "./Scene/SidepanelAPI/OpenSidepanel";
 // import HideSidepanel from "./Scene/SidepanelAPI/HideSidepanel";
 // import GoToAnotherView from "./Scene/ViewsAPI/GoToAnotherView";
@@ -9,10 +11,7 @@ import ReactDOM from "react-dom";
 // import UpdateScene from "./Scene/ViewsAPI/UpdateScene";
 // import CloseMayer from "./Scene/MayersAPI/CloseMayer";
 // import CloseMayerFromButtonsConfig from "./Scene/MayersAPI/CloseMayerFromButtonsConfig";
-
-const rootElement = document.getElementById("root");
-ReactDOM.render(<div>Airr React Components API</div>, rootElement);
-
+// import OpenMayer from "./Scene/MayersAPI/OpenMayer";
 // ReactDOM.render(<OpenSidepanel />, rootElement);
 // ReactDOM.render(<HideSidepanel />, rootElement);
 // ReactDOM.render(<GoToAnotherView />, rootElement);
@@ -22,3 +21,6 @@ ReactDOM.render(<div>Airr React Components API</div>, rootElement);
 // ReactDOM.render(<UpdateScene />, rootElement);
 // ReactDOM.render(<CloseMayer />, rootElement);
 // ReactDOM.render(<CloseMayerFromButtonsConfig />, rootElement);
+// ReactDOM.render(<OpenMayer />, rootElement);
+
+ReactDOM.render(<div>Airr React Components API</div>, rootElement);
